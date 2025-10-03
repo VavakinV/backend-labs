@@ -1,10 +1,12 @@
 // создается билдер веб приложения
 
 using Dapper;
-using WebApi.BBL.Services;
+using FluentValidation;
+using WebApi.BLL.Services;
 using WebApi.DAL;
 using WebApi.DAL.Interfaces;
 using WebApi.DAL.Repositories;
+using WebApi.Validators;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +18,8 @@ builder.Services.Configure<DbSettings>(builder.Configuration.GetSection(nameof(D
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 builder.Services.AddScoped<IOrderItemRepository, OrderItemRepository>();
 builder.Services.AddScoped<OrderService>();
+builder.Services.AddValidatorsFromAssemblyContaining(typeof(Program));
+builder.Services.AddScoped<ValidatorFactory>();
 
 // зависимость, которая автоматически подхватывает все контроллеры в проекте
 builder.Services.AddControllers();

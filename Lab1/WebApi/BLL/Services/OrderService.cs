@@ -1,9 +1,9 @@
-using WebApi.BBL.Models;
+using WebApi.BLL.Models;
 using WebApi.DAL;
 using WebApi.DAL.Interfaces;
 using WebApi.DAL.Models;
 
-namespace WebApi.BBL.Services;
+namespace WebApi.BLL.Services;
 
 public class OrderService(UnitOfWork unitOfWork, IOrderRepository orderRepository, IOrderItemRepository orderItemRepository)
 {
