@@ -3,7 +3,7 @@ using FluentMigrator.Runner.VersionTableInfo;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Npgsql;
-
+namespace Migrations;
 public static class Program
 {
     public static void Main(string[] args)

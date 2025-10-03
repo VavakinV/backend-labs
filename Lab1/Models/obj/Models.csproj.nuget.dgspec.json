@@ -1,27 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\admin\\RiderProjects\\Lab1\\Models\\Models.csproj": {}
+    "/home/vlad/Labs/backend-labs/Lab1/Models/Models.csproj": {}
   },
   "projects": {
-    "C:\\Users\\admin\\RiderProjects\\Lab1\\Models\\Models.csproj": {
+    "/home/vlad/Labs/backend-labs/Lab1/Models/Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\admin\\RiderProjects\\Lab1\\Models\\Models.csproj",
+        "projectUniqueName": "/home/vlad/Labs/backend-labs/Lab1/Models/Models.csproj",
         "projectName": "Models",
-        "projectPath": "C:\\Users\\admin\\RiderProjects\\Lab1\\Models\\Models.csproj",
-        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\admin\\RiderProjects\\Lab1\\Models\\obj\\",
+        "projectPath": "/home/vlad/Labs/backend-labs/Lab1/Models/Models.csproj",
+        "packagesPath": "/home/vlad/.nuget/packages/",
+        "outputPath": "/home/vlad/Labs/backend-labs/Lab1/Models/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/home/vlad/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "/usr/lib/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -40,7 +39,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -61,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/9.0.110/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

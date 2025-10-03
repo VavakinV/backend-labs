@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DZuG7VZtHC4=",
+  "dgSpecHash": "sWcI9gVjFr8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\admin\\RiderProjects\\Lab1\\Models\\Models.csproj",
+  "projectFilePath": "/home/vlad/Labs/backend-labs/Lab1/Models/Models.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
