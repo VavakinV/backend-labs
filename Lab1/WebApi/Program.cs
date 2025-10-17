@@ -3,6 +3,7 @@
 using Dapper;
 using FluentValidation;
 using WebApi.BLL.Services;
+using WebApi.Config;
 using WebApi.DAL;
 using WebApi.DAL.Interfaces;
 using WebApi.DAL.Repositories;
@@ -14,12 +15,14 @@ DefaultTypeMap.MatchNamesWithUnderscores = true;
 builder.Services.AddScoped<UnitOfWork>();
 
 builder.Services.Configure<DbSettings>(builder.Configuration.GetSection(nameof(DbSettings)));
+builder.Services.Configure<RabbitMqSettings>(builder.Configuration.GetSection(nameof(RabbitMqSettings)));
 
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 builder.Services.AddScoped<IOrderItemRepository, OrderItemRepository>();
 builder.Services.AddScoped<OrderService>();
 builder.Services.AddValidatorsFromAssemblyContaining(typeof(Program));
 builder.Services.AddScoped<ValidatorFactory>();
+builder.Services.AddScoped<RabbitMqService>();
 
 // зависимость, которая автоматически подхватывает все контроллеры в проекте
 builder.Services.AddControllers();

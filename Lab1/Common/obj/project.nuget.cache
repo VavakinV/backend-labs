@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "RqUlj9pMYcM=",
+  "success": true,
+  "projectFilePath": "/home/vlad/Labs/backend-labs/Lab1/Common/Common.csproj",
+  "expectedPackageFiles": [
+    "/home/vlad/.nuget/packages/newtonsoft.json/13.0.4/newtonsoft.json.13.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}
