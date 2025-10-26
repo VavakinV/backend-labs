@@ -1,5 +1,6 @@
 // создается билдер веб приложения
 
+using System.Text.Json;
 using Dapper;
 using FluentValidation;
 using WebApi.BLL.Services;
@@ -17,14 +18,23 @@ builder.Services.AddScoped<UnitOfWork>();
 builder.Services.Configure<DbSettings>(builder.Configuration.GetSection(nameof(DbSettings)));
 builder.Services.Configure<RabbitMqSettings>(builder.Configuration.GetSection(nameof(RabbitMqSettings)));
 
+builder.Services.AddScoped<IAuditLogOrderRepository, AuditLogOrderRepository>();
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 builder.Services.AddScoped<IOrderItemRepository, OrderItemRepository>();
+
+builder.Services.AddScoped<AuditLogService>();
 builder.Services.AddScoped<OrderService>();
-builder.Services.AddValidatorsFromAssemblyContaining(typeof(Program));
-builder.Services.AddScoped<ValidatorFactory>();
 builder.Services.AddScoped<RabbitMqService>();
 
+builder.Services.AddValidatorsFromAssemblyContaining(typeof(Program));
+builder.Services.AddScoped<ValidatorFactory>();
+
 // зависимость, которая автоматически подхватывает все контроллеры в проекте
+builder.Services.AddControllers().AddJsonOptions(options => 
+{
+    options.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.SnakeCaseLower;
+});
+
 builder.Services.AddControllers();
 // добавляем swagger
 builder.Services.AddSwaggerGen();

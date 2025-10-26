@@ -1,11 +1,14 @@
-using WebApi.BLL.Models;
+using Messages;
+using Microsoft.Extensions.Options;
+using Models.Dto.Common;
+using WebApi.Config;
 using WebApi.DAL;
 using WebApi.DAL.Interfaces;
 using WebApi.DAL.Models;
 
 namespace WebApi.BLL.Services;
 
-public class OrderService(UnitOfWork unitOfWork, IOrderRepository orderRepository, IOrderItemRepository orderItemRepository)
+public class OrderService(UnitOfWork unitOfWork, IOrderRepository orderRepository, IOrderItemRepository orderItemRepository, RabbitMqService _rabbitMqService, IOptions<RabbitMqSettings> settings)
 {
     /// <summary>
     /// Метод создания заказов
@@ -52,7 +55,29 @@ public class OrderService(UnitOfWork unitOfWork, IOrderRepository orderRepositor
             await transaction.CommitAsync(token);
         
             var orderItemLookup = orderItems.ToLookup(x => x.OrderId);
-        
+            
+            var messages = ordersToInsert.Select(order => new OrderCreatedMessage
+            {
+                Id = order.Id,
+                CustomerId = order.CustomerId,
+                DeliveryAddress = order.DeliveryAddress,
+                TotalPriceCents = order.TotalPriceCents,
+                TotalPriceCurrency = order.TotalPriceCurrency,
+                CreatedAt = order.CreatedAt,
+                UpdatedAt = order.UpdatedAt,
+                OrderItems = orderItemLookup[order.Id].Select(i => new OrderItemUnit()
+                {
+                    ProductId = i.ProductId,
+                    Quantity = i.Quantity,
+                    ProductTitle = i.ProductTitle,
+                    ProductUrl = i.ProductUrl,
+                    PriceCents = i.PriceCents,
+                    PriceCurrency = i.PriceCurrency
+                }).ToArray()
+            }).ToArray();
+            
+            await _rabbitMqService.Publish(messages, settings.Value.OrderCreatedQueue, token);
+
             return Map(ordersToInsert, orderItemLookup);
         }
         catch (Exception e) 
@@ -65,7 +90,7 @@ public class OrderService(UnitOfWork unitOfWork, IOrderRepository orderRepositor
     /// <summary>
     /// Метод получения заказов
     /// </summary>
-    public async Task<OrderUnit[]> GetOrders(QueryOrderItemsModel model, CancellationToken token)
+    public async Task<OrderUnit[]> GetOrders(Models.QueryOrderItemsModel model, CancellationToken token)
     {
         var orders = await orderRepository.Query(new QueryOrdersDalModel
         {

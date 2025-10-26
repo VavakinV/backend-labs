@@ -104,3 +104,9 @@
 /home/vlad/Labs/backend-labs/Lab1/WebApi/obj/Debug/net9.0/WebApi.pdb
 /home/vlad/Labs/backend-labs/Lab1/WebApi/obj/Debug/net9.0/WebApi.genruntimeconfig.cache
 /home/vlad/Labs/backend-labs/Lab1/WebApi/obj/Debug/net9.0/ref/WebApi.dll
+/home/vlad/Labs/backend-labs/Lab1/WebApi/bin/Debug/net9.0/Newtonsoft.Json.dll
+/home/vlad/Labs/backend-labs/Lab1/WebApi/bin/Debug/net9.0/RabbitMQ.Client.dll
+/home/vlad/Labs/backend-labs/Lab1/WebApi/bin/Debug/net9.0/Common.dll
+/home/vlad/Labs/backend-labs/Lab1/WebApi/bin/Debug/net9.0/Messages.dll
+/home/vlad/Labs/backend-labs/Lab1/WebApi/bin/Debug/net9.0/Common.pdb
+/home/vlad/Labs/backend-labs/Lab1/WebApi/bin/Debug/net9.0/Messages.pdb

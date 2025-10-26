@@ -1,0 +1,13 @@
+/home/vlad/Labs/backend-labs/Lab1/Common/bin/Debug/net9.0/Common.deps.json
+/home/vlad/Labs/backend-labs/Lab1/Common/bin/Debug/net9.0/Common.dll
+/home/vlad/Labs/backend-labs/Lab1/Common/bin/Debug/net9.0/Common.pdb
+/home/vlad/Labs/backend-labs/Lab1/Common/obj/Debug/net9.0/Common.csproj.AssemblyReference.cache
+/home/vlad/Labs/backend-labs/Lab1/Common/obj/Debug/net9.0/Common.GeneratedMSBuildEditorConfig.editorconfig
+/home/vlad/Labs/backend-labs/Lab1/Common/obj/Debug/net9.0/Common.AssemblyInfoInputs.cache
+/home/vlad/Labs/backend-labs/Lab1/Common/obj/Debug/net9.0/Common.AssemblyInfo.cs
+/home/vlad/Labs/backend-labs/Lab1/Common/obj/Debug/net9.0/Common.csproj.CoreCompileInputs.cache
+/home/vlad/Labs/backend-labs/Lab1/Common/obj/Debug/net9.0/Common.sourcelink.json
+/home/vlad/Labs/backend-labs/Lab1/Common/obj/Debug/net9.0/Common.dll
+/home/vlad/Labs/backend-labs/Lab1/Common/obj/Debug/net9.0/refint/Common.dll
+/home/vlad/Labs/backend-labs/Lab1/Common/obj/Debug/net9.0/Common.pdb
+/home/vlad/Labs/backend-labs/Lab1/Common/obj/Debug/net9.0/ref/Common.dll

@@ -1,5 +1,3 @@
-using System.Runtime.CompilerServices;
-
 namespace WebApi.Config;
 
 public class RabbitMqSettings
