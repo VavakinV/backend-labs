@@ -110,3 +110,5 @@
 /home/vlad/Labs/backend-labs/Lab1/WebApi/bin/Debug/net9.0/Messages.dll
 /home/vlad/Labs/backend-labs/Lab1/WebApi/bin/Debug/net9.0/Common.pdb
 /home/vlad/Labs/backend-labs/Lab1/WebApi/bin/Debug/net9.0/Messages.pdb
+/home/vlad/Labs/backend-labs/Lab1/WebApi/bin/Debug/net9.0/AutoFixture.dll
+/home/vlad/Labs/backend-labs/Lab1/WebApi/bin/Debug/net9.0/Fare.dll

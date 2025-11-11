@@ -67,6 +67,8 @@ public class OrderService(UnitOfWork unitOfWork, IOrderRepository orderRepositor
                 UpdatedAt = order.UpdatedAt,
                 OrderItems = orderItemLookup[order.Id].Select(i => new OrderItemUnit()
                 {
+                    Id = i.OrderId,
+                    OrderId = i.OrderId,
                     ProductId = i.ProductId,
                     Quantity = i.Quantity,
                     ProductTitle = i.ProductTitle,

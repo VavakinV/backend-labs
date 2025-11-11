@@ -1,23 +1,11 @@
 {
   "Version": 1,
-  "Hash": "A/FL8mCl3nthkocOGjEJuzKwK5z0SuWB/ZbVortSNfU=",
+  "Hash": "lNUORdUqBwhDqQBXzGug5MhfF1WC+UOSxhsLYM3dLxM=",
   "Source": "Consumer",
   "BasePath": "_content/Consumer",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [
-    {
-      "Identity": "/home/vlad/Labs/backend-labs/Lab1/WebApi/WebApi.csproj",
-      "Version": 2,
-      "Source": "WebApi",
-      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
-      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
-      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
-      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
-      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
-      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
-    }
-  ],
+  "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
   "Assets": [],
   "Endpoints": []

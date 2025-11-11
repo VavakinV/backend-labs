@@ -8,12 +8,13 @@
 
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.9"/>
+        <PackageReference Include="RabbitMQ.Client" Version="7.2.0" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\Common\Common.csproj" />
+      <ProjectReference Include="..\Messages\Messages.csproj" />
       <ProjectReference Include="..\Models\Models.csproj" />
-      <ProjectReference Include="..\WebApi\WebApi.csproj" />
     </ItemGroup>
 
 </Project>
